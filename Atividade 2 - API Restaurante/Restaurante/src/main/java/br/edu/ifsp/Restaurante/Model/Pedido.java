@@ -1,11 +1,12 @@
 package br.edu.ifsp.Restaurante.Model;
 
-import br.edu.ifsp.Restaurante.dto.PedidoRequestDTO;
-import br.edu.ifsp.Restaurante.dto.PedidoResponseDTO;
+import br.edu.ifsp.Restaurante.DTO.PedidoRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -22,8 +23,20 @@ public class Pedido {
     @Column(name = "descricao")
     private String descricao;
 
-    public  Pedido(PedidoRequestDTO data){
-        this.descricao = data.descricao();
-    }
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Cliente cliente;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Funcionario funcionario;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "pedido_prato", joinColumns = @JoinColumn(name = "id_pedido"), inverseJoinColumns = @JoinColumn(name = "id_prato")) // criando uma "tabela associativa" entre prato e pedido
+    private List<Prato> pratos; // mostra todos os pratos de um pedido
+
+
+    public Pedido(String descricao, Cliente cliente, List<Prato> pratos) {
+        this.descricao = descricao;
+        this.cliente = cliente;
+        this.pratos = pratos;
+    }
 }

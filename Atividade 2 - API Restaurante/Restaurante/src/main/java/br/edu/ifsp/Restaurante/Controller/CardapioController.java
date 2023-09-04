@@ -1,13 +1,12 @@
 package br.edu.ifsp.Restaurante.Controller;
 
 import br.edu.ifsp.Restaurante.Model.Prato;
-import br.edu.ifsp.Restaurante.dto.CardapioRequestDTO;
-import br.edu.ifsp.Restaurante.dto.CardapioResponseDTO;
-import br.edu.ifsp.Restaurante.repository.CardapioRepository;
+import br.edu.ifsp.Restaurante.DTO.CardapioRequestDTO;
+import br.edu.ifsp.Restaurante.DTO.CardapioResponseDTO;
+import br.edu.ifsp.Restaurante.Repository.CardapioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

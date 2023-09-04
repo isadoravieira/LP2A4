@@ -2,9 +2,9 @@ package br.edu.ifsp.Restaurante.Controller;
 
 import br.edu.ifsp.Restaurante.Model.Funcionario;
 import br.edu.ifsp.Restaurante.Model.Pedido;
-import br.edu.ifsp.Restaurante.dto.FuncionarioRequestDTO;
-import br.edu.ifsp.Restaurante.dto.FuncionarioResponseDTO;
-import br.edu.ifsp.Restaurante.repository.FuncionarioRepository;
+import br.edu.ifsp.Restaurante.DTO.FuncionarioRequestDTO;
+import br.edu.ifsp.Restaurante.DTO.FuncionarioResponseDTO;
+import br.edu.ifsp.Restaurante.Repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

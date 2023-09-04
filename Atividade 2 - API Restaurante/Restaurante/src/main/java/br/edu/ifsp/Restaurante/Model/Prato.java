@@ -1,11 +1,12 @@
 package br.edu.ifsp.Restaurante.Model;
 
-import br.edu.ifsp.Restaurante.dto.CardapioRequestDTO;
-import br.edu.ifsp.Restaurante.dto.CardapioResponseDTO;
+import br.edu.ifsp.Restaurante.DTO.CardapioRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data // gera metodos padrões (getters e setters)
 @NoArgsConstructor
@@ -24,6 +25,9 @@ public class Prato {
     private String descricao;
     @Column(name = "preco")
     private double preco;
+
+    @ManyToMany(mappedBy = "pratos") //O mappedBy é para indicar qual é o lado inverso ou não dominante da relação
+    private List<Pedido> pedidos; // esse é um pouco desnecessario na pratica, pois mostra todos os pedidos de um determinado prato
 
     public Prato(CardapioRequestDTO data){
         this.titulo = data.titulo();

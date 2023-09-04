@@ -23,11 +23,13 @@ public class FuncionarioController {
         return funcionarioRepository.findById(cpf);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public List<FuncionarioResponseDTO> findAll(){
         return funcionarioRepository.findAll().stream().map(FuncionarioResponseDTO::new).toList();
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public void addFuncionario(@RequestBody FuncionarioRequestDTO data){
         funcionarioRepository.save(new Funcionario(data));

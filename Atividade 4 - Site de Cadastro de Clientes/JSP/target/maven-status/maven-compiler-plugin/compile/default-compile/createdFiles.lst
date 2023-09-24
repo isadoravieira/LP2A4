@@ -1,5 +1,0 @@
-servlets/MainServlets.class
-servlets/DetalharClienteservlet.class
-model/Cliente.class
-servlets/CadastrarClienteServlet.class
-servlets/ListarClienteServlet.class

@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
-         version="5.0">
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- Mapeamento do servlet principal -->
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>servlets.MainServlets</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapeamento do servlet de listagem de clientes -->
+    <servlet>
+        <servlet-name>ListarClientesServlet</servlet-name>
+        <servlet-class>servlets.ListarClientesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListarClientesServlet</servlet-name>
+        <url-pattern>/listarClientes</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapeamento do servlet de cadastro de clientes -->
+    <servlet>
+        <servlet-name>CadastrarClienteServlet</servlet-name>
+        <servlet-class>servlets.CadastrarClienteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CadastrarClienteServlet</servlet-name>
+        <url-pattern>/cadastrarCliente</url-pattern>
+    </servlet-mapping>
+
+    <!-- Mapeamento do servlet de detalhes do cliente -->
+    <servlet>
+        <servlet-name>DetalhesClienteServlet</servlet-name>
+        <servlet-class>servlets.DetalhesClientesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetalhesClienteServlet</servlet-name>
+        <url-pattern>/detalhesCliente</url-pattern>
+    </servlet-mapping>
+
+    <!-- Página de início -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
 </web-app>

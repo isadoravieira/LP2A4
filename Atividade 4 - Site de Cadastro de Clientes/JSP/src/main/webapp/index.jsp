@@ -1,10 +1,21 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Cadastro de Clientes</title>
+    <title>Página Inicial</title>
 </head>
 <body>
-   <button type="submit" action="${pageContext.request.contextPath}/cadastrar.jsp">Cadastrar</button>
-   <button type="submit" action="${pageContext.request.contextPath}/listar.jsp">Listar</button>
-   <button type="submit" action="${pageContext.request.contextPath}/detalhar.jsp">Detalhes </button>
+    <h1>Bem-vindo ao Sistema de Cadastro de Clientes</h1>
+    <p>Escolha uma das opções abaixo:</p>
+
+    <ul>
+        <li><a href="cadastrarCliente">Cadastrar Cliente</a></li>
+        <li><a href="listarClientes">Listar Clientes</a></li>
+
+    </ul>
 </body>
 </html>
+
+
+
+
+

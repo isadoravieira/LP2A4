@@ -1,7 +1,6 @@
 package servlets;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -9,24 +8,25 @@ import model.Cliente;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "cadastrar")
 public class CadastrarClienteServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("./cadastrar.jsp").forward(req, resp);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Exibir página de cadastro de clientes
+        request.getRequestDispatcher("/WEB-INF/views/cadastrarCliente.jsp").forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        long id = Long.parseLong(req.getRequestId());
-        String nome = req.getParameter("nome");
-        String data = req.getParameter("data");
-        long cpf = Long.parseLong(req.getParameter("cpf"));
-        long telefone = Long.parseLong(req.getParameter("telefone"));
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Cliente cliente = new Cliente(id,nome,data,cpf,telefone);
+        // Lógica para cadastrar um cliente
+        String id = request.getParameter("id");
+        String nome = request.getParameter("nome");
+        String dataNascimento = request.getParameter("dataNascimento");
+        String cpf = request.getParameter("cpf");
+        String telefone = request.getParameter("telefone");
+        Cliente cliente = new Cliente(id,nome,dataNascimento,cpf,telefone);
 
-        resp.sendRedirect("/listar.jps");
+        // Salvar o cliente na lista de clientes
+
+        response.sendRedirect("/listarClientes"); // Redirecionar para a lista de clientes após o cadastro
     }
 }

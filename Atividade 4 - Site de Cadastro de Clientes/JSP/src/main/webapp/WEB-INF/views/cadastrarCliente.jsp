@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>Cadastrar Cliente</title>
+    <link rel="stylesheet" type="text/css" href="<c:url value='/css/styles.css' />">
+
+
 </head>
 <body>
     <h1>Cadastrar Cliente</h1>

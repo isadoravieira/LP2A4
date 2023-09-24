@@ -14,8 +14,9 @@ public class ListarClientesServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Cliente> clientes = new ArrayList<>();
-        request.setAttribute("clientes", clientes);
+        List<Cliente> listaClientes = Cliente.listarClientes(); // Obtém a lista de clientes
+
+        request.setAttribute("clientes", listaClientes); // Configura como atributo de solicitação
         request.getRequestDispatcher("/WEB-INF/views/listarClientes.jsp").forward(request, response);
     }
 }

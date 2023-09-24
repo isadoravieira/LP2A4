@@ -4,8 +4,8 @@
     <title>Página Inicial</title>
 </head>
 <body>
-    <h1>Bem-vindo ao Sistema de Cadastro de Clientes</h1>
-    <p>Escolha uma das opções abaixo:</p>
+    <h1>Sistema de Cadastro de Clientes</h1>
+    <p>Escolha uma das opcoes abaixo:</p>
 
     <ul>
         <li><a href="cadastrarCliente">Cadastrar Cliente</a></li>

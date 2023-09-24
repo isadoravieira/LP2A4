@@ -92,4 +92,14 @@ public class Cliente {
         }
         return null;
     }
+
+    public static List<Cliente> listarClientes() {
+        if(clientes.isEmpty()){
+            System.out.println("A lista de clientes está vazia.");
+        }
+        else{
+            return clientes;
+        }
+        return null;
+    }
 }

@@ -40,9 +40,8 @@
         }
     </style>
 
-
-
 </head>
+
 <body style="font-family: Arial, sans-serif; background-color: #f0f2f5; color: #333333; text-align: center;">
     <h1 style="font-family: Arial, sans-serif ;font-size: 36px; text-align: center; margin-top: 35px;">Cadastrar Cliente</h1>
 

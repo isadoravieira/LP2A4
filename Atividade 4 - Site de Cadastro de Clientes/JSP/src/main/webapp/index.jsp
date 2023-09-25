@@ -13,10 +13,10 @@
             color:  white;
             transition: 0.3s all;
             font-weight: bold;
-            border: 2px solid rgb(34,34,34);
+            border: 2px solid rgb(132,14,201);
             padding: 10px;
             border-radius: 20px;
-            background-color: rgb(34,34,34);
+            background-color: rgb(132,14,201);
         }
     </style>
 

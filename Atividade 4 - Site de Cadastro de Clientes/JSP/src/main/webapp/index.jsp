@@ -4,6 +4,22 @@
     <title>Pagina Inicial</title>
     <link rel="stylesheet" href="./webapp/css/style.css">
 
+    <style>
+        a{
+            color:  rgb(34,34,34);
+        }
+
+        a:hover{
+            color:  white;
+            transition: 0.3s all;
+            font-weight: bold;
+            border: 2px solid rgb(34,34,34);
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgb(34,34,34);
+        }
+    </style>
+
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #f0f2f5; color: #333333;">
     <h1 style="font-family: Arial, sans-serif ;font-size: 36px; text-align: center; margin-top: 35px;">Sistema de Cadastro de Clientes</h1>
